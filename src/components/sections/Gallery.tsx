@@ -11,8 +11,8 @@ const photos = [
     { src: "/assets/images/galeria/IMG_1659.webp", width: 1200, height: 900 },
     { src: "/assets/images/galeria/IMG_1671.webp", width: 1200, height: 900 },
     { src: "/assets/images/galeria/IMG_1673.webp", width: 1200, height: 900 },
-    { src: "/assets/images/galeria/IMG_1964.webp", width: 1200, height: 900 },
     { src: "/assets/images/galeria/IMG_1966.webp", width: 1200, height: 900 },
+    { src: "/assets/images/galeria/IMG_1964.webp", width: 1200, height: 900 },
 ];
 
 export function Gallery() {
