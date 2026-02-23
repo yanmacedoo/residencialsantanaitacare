@@ -79,7 +79,10 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-                    <p>&copy; {currentYear} {t('footer.rights')}</p>
+                    <div className="flex flex-col items-center md:items-start gap-1 text-center md:text-left">
+                        <p>&copy; {currentYear} {t('footer.rights')}</p>
+                        <p>RESIDENCIAL SANTANA LTDA - 64.590.274/0001-60</p>
+                    </div>
                     <a
                         href="http://nuscorre.com.br"
                         target="_blank"
