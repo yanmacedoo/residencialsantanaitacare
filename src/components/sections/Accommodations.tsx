@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, BedDouble, AirVent, Tv, CookingPot, Home, ChevronLeft, ChevronRight, Bath } from 'lucide-react';
+import { Users, BedDouble, AirVent, Tv, CookingPot, Home, ChevronLeft, ChevronRight, Bath, WashingMachine } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
 
@@ -40,6 +40,7 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <CookingPot size={18} />, text: t('accommodations.loft.amenity1') },
             { icon: <AirVent size={18} />, text: t('accommodations.loft.amenity2') },
             { icon: <Tv size={18} />, text: t('accommodations.loft.amenity3') },
+            { icon: <WashingMachine size={18} />, text: t('accommodations.loft.amenity4') },
         ],
         images: [
             '/assets/images/loft/image1.webp',
@@ -65,6 +66,7 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <Home size={18} />, text: t('accommodations.apartment.living') },
             { icon: <AirVent size={18} />, text: t('accommodations.apartment.amenity2') },
             { icon: <Tv size={18} />, text: t('accommodations.apartment.amenity3') },
+            { icon: <WashingMachine size={18} />, text: t('accommodations.apartment.amenity4') },
         ],
         images: [
             '/assets/images/apt/image1.webp',

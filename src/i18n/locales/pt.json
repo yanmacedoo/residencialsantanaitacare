@@ -34,19 +34,21 @@
             "desc": "Espaço moderno e integrado com cozinha privativa, unindo o conforto de um hotel com a liberdade de casa.",
             "capacity": "Até 2 pessoas",
             "bed": "Cama Queen Size",
-            "amenity1": "Cozinha equipada e Lavanderia",
+            "amenity1": "Cozinha completa",
             "amenity2": "Ar-condicionado",
-            "amenity3": "TV"
+            "amenity3": "TV",
+            "amenity4": "Lavanderia"
         },
         "apartment": {
             "title": "Apartamento",
             "desc": "A maior unidade do residencial, com ambientes separados e estrutura completa para toda a família.",
             "capacity": "Até 6 pessoas",
-            "bed": "Quarto privativo + Sofá-cama na sala",
-            "kitchen": "Cozinha completa com utensílios",
-            "living": "Sala de estar",
+            "bed": "Quarto privativo",
+            "kitchen": "Cozinha completa",
+            "living": "Sala de estar com Sofá-cama",
             "amenity2": "Ar-condicionado",
-            "amenity3": "TV"
+            "amenity3": "TV",
+            "amenity4": "Lavanderia"
         },
         "check_availability": "Reservar"
     },

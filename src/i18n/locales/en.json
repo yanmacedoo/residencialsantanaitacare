@@ -34,19 +34,21 @@
             "desc": "Modern and integrated space with a private kitchen, combining hotel comfort with the freedom of home.",
             "capacity": "Up to 2 people",
             "bed": "Queen Size Bed",
-            "amenity1": "Equipped kitchen and laundry",
+            "amenity1": "Full kitchen",
             "amenity2": "Air conditioning",
-            "amenity3": "TV"
+            "amenity3": "TV",
+            "amenity4": "Laundry"
         },
         "apartment": {
             "title": "Apartment",
             "desc": "The largest unit in the residence, with separate environments and full structure for the whole family.",
             "capacity": "Up to 6 people",
-            "bed": "Private bedroom + Sofa bed in living room",
-            "kitchen": "Full kitchen with utensils",
-            "living": "Living room",
+            "bed": "Private bedroom",
+            "kitchen": "Full kitchen",
+            "living": "Living room with Sofa bed",
             "amenity2": "Air conditioning",
-            "amenity3": "TV"
+            "amenity3": "TV",
+            "amenity4": "Laundry"
         },
         "check_availability": "Book"
     },
