@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export function BookingWidget() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    // Determina o path de idioma para o HQBeds (espera 'en' ou 'pt-br')
+    const hqBedsLang = i18n.language && i18n.language.startsWith('en') ? 'en' : 'pt-br';
 
     return (
         <section id="reservar" className="py-14 bg-[var(--color-background-offwhite)] relative overflow-hidden">
@@ -41,7 +44,7 @@ export function BookingWidget() {
                 >
                     <div className="relative w-full overflow-hidden rounded-2xl" style={{ minHeight: '330px' }}>
                         <iframe
-                            src="https://admin.hqbeds.com.br/pt-br/hqb/O75y5L2ZaE/widget2?width=1280&use_fluid_width=1&body_color=FFFFFF&body_text_color=785a46&button_color=8e684f&button_text_color=ffffff"
+                            src={`https://admin.hqbeds.com.br/${hqBedsLang}/hqb/O75y5L2ZaE/widget2?width=1280&use_fluid_width=1&body_color=FFFFFF&body_text_color=785a46&button_color=8e684f&button_text_color=ffffff`}
                             style={{ width: '100%', height: '330px', border: 'none' }}
                             title="Residencial Santana - Motor de Reservas HQBeds"
                             allowFullScreen
