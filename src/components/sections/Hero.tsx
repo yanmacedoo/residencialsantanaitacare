@@ -39,12 +39,12 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mb-10 w-[350px] md:w-[460px] lg:w-[640px] xl:w-[780px]"
+                    className="mb-10 w-full max-w-[300px] md:max-w-[460px] lg:max-w-[640px] xl:max-w-[780px] mx-auto"
                 >
                     <img
                         src={i18n.language === 'en' ? '/assets/images/residencialsantana-en.svg' : '/assets/images/residencialsantana.svg'}
                         alt="Residencial Santana"
-                        className="w-full h-auto mx-auto"
+                        className="w-full h-auto block mx-auto"
                     />
                 </motion.div>
 
