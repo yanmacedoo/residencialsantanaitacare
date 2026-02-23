@@ -1,0 +1,154 @@
+{
+    "header": {
+        "nav": {
+            "home": "Home",
+            "accommodations": "Accommodations",
+            "amenities": "Amenities",
+            "location": "Location",
+            "gallery": "Gallery",
+            "faq": "FAQ"
+        },
+        "reserve_btn": "Book",
+        "reserve_now_btn": "Book Now"
+    },
+    "hero": {
+        "welcome": "Welcome to Itacaré",
+        "title": "Residencial Santana",
+        "subtitle": "Suites, Lofts, and Apartments designed for your comfort in the best location of the city.",
+        "cta_availability": "Check Availability"
+    },
+    "accommodations": {
+        "title": "Our Accommodations",
+        "subtitle": "Options carefully designed with sophistication to meet different needs, all with the exclusivity and comfort you deserve.",
+        "suite": {
+            "title": "Suite",
+            "desc": "Versatile and cozy accommodation, ideal for those seeking practicality without giving up comfort.",
+            "capacity": "2 or 3 people",
+            "bed": "Queen Bed or Triple Configuration",
+            "amenity1": "Air conditioning and private bathroom",
+            "tv": "LED TV"
+        },
+        "loft": {
+            "title": "Loft",
+            "desc": "Modern and integrated space with a private kitchen, combining hotel comfort with the freedom of home.",
+            "capacity": "Up to 2 people",
+            "bed": "Queen Size Bed",
+            "amenity1": "Equipped kitchen and laundry",
+            "amenity2": "Air conditioning and TV"
+        },
+        "apartment": {
+            "title": "Apartment",
+            "desc": "The largest unit in the residence, with separate environments and full structure for the whole family.",
+            "capacity": "Up to 6 people",
+            "bed": "Private bedroom + Sofa bed in living room",
+            "kitchen": "Full kitchen with utensils",
+            "living": "Living room and TV",
+            "amenity2": "Air conditioning and TV"
+        },
+        "check_availability": "Book"
+    },
+    "amenities": {
+        "title": "Feel at home",
+        "subtitle": "We've thought of every detail to provide maximum comfort during your stay in this Bahian paradise.",
+        "list": {
+            "ac": {
+                "title": "Air Conditioning",
+                "desc": "Perfect climate control in all units"
+            },
+            "wifi": {
+                "title": "Free Wi-Fi",
+                "desc": "High-speed internet everywhere"
+            },
+            "kitchen": {
+                "title": "Equipped Kitchen",
+                "desc": "Fully equipped to prepare your own meals"
+            },
+            "bedding": {
+                "title": "Bed Linens",
+                "desc": "Premium hotel-quality linens"
+            },
+            "cleaning": {
+                "title": "Impeccable Cleaning",
+                "desc": "Sanitized and spotless environments"
+            },
+            "leisure": {
+                "title": "Leisure Area",
+                "desc": "Space with outdoor shower, barbecue, tables and cold drinks"
+            },
+            "security": {
+                "title": "Security",
+                "desc": "Closed and secure location"
+            },
+            "perfect_location": {
+                "title": "Perfect Location",
+                "desc": "Close to the best beaches and clubs in Itacaré"
+            }
+        }
+    },
+    "location": {
+        "label": "Our Location",
+        "title": "The heart of Itacaré",
+        "desc": "Residencial Santana is strategically located so you can enjoy the best the city has to offer. We are just steps away from the famous Pituba Street, Itacaré's gastronomic and nightlife center.",
+        "places": {
+            "concha": {
+                "name": "Concha Beach",
+                "time": "8 minutes walk"
+            },
+            "tiririca": {
+                "name": "Tiririca Beach",
+                "time": "15 minutes walk"
+            },
+            "pituba": {
+                "name": "Pituba Street",
+                "time": "2 minutes walk"
+            }
+        },
+        "map_btn": "View on Google Maps",
+        "card_title": "Residencial Santana",
+        "card_desc": "Feel the sea breeze without giving up urban comfort."
+    },
+    "gallery": {
+        "title": "Photo Gallery",
+        "subtitle": "Explore our spaces in detail. A glimpse of the comfort and style awaiting you on your next vacation.",
+        "zoom": "Enlarge"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know before booking your stay with us.",
+        "more_questions": "Still have questions?",
+        "contact_whatsapp": "Talk to us on WhatsApp →",
+        "questions": [
+            {
+                "q": "What are the check-in and check-out times?",
+                "a": "Check-in is from 2:00 PM and check-out is until 12:00 PM. Flexible hours can be arranged depending on availability."
+            },
+            {
+                "q": "Are pets allowed?",
+                "a": "Please check availability and conditions for hosting with pets via WhatsApp."
+            },
+            {
+                "q": "What is the cancellation policy?",
+                "a": "Free cancellation up to 7 days before the check-in date. Check specific conditions at the time of booking."
+            },
+            {
+                "q": "Is the residence close to the center (Pituba Street)?",
+                "a": "Yes, we are strategically located so you can enjoy the nightlife and restaurants on Pituba Street without needing a car."
+            }
+        ]
+    },
+    "footer": {
+        "about": "Your home in Itacaré. Comfort, privileged location, and unforgettable moments in the heart of Bahia.",
+        "quick_links": "Quick Links",
+        "links_title": "Quick Links",
+        "contacts": "Contact",
+        "contact_title": "Contact",
+        "address": "Castro Alves Ave, 05 (Caminho da Ribeira), Itacaré - BA Zip Code: 45530-000",
+        "rights": "Residencial Santana. All rights reserved.",
+        "developed_by": "Developed with sophistication"
+    },
+    "wa_messages": {
+        "suite": "Hello! I would like to know the availability of the Suite.",
+        "loft": "Hello! I would like to know the availability of the Loft.",
+        "apartment": "Hello! I would like to know the availability of the Apartment."
+    }
+}

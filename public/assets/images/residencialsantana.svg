@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541.96 223.58" width="541.96" height="223.58">
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541.96 223.58">
   <defs>
     <style>
       .cls-1, .cls-2 {
@@ -7,7 +7,7 @@
       }
 
       .cls-3 {
-        fill: #af7a48;
+        fill: #8e684f;
       }
 
       .cls-4 {
@@ -22,7 +22,7 @@
 
       .cls-5 {
         font-family: Poppins-SemiBold, Poppins;
-        font-size: 20.87px;
+        font-size: 22.04px;
         font-weight: 600;
       }
 
@@ -35,11 +35,11 @@
     </style>
   </defs>
   <g id="Camada_1-2" data-name="Camada 1">
-    <rect class="cls-3" y="167.17" width="541.96" height="25.45"/>
+    <rect class="cls-3" x="0" y="167.17" width="541.96" height="25.45"/>
     <rect class="cls-3" x="18.02" y="196.43" width="505.92" height="24.66"/>
-    <text class="cls-5" text-anchor="middle" x="270.98" y="187.17">Experience Itacaré with the comfort you deserve!</text>
-    <text class="cls-4" text-anchor="middle" x="270.98" y="214.13">Furnished suites, lofts, and apartments at the heart of it all.</text>
-    <text class="cls-2" text-anchor="middle" x="270.98" y="38.97">residencial</text>
+    <text class="cls-5" transform="translate(12.11 187.33)"><tspan x="0" y="0">Viva Itacaré com o conforto que você merece!</tspan></text>
+    <text class="cls-4" transform="translate(31.08 214.13)"><tspan x="0" y="0">Suítes, lofts e Apartamentos mobiliados no centro de tudo.</tspan></text>
+    <text class="cls-2" transform="translate(118.74 38.97)"><tspan x="0" y="0">residencial</tspan></text>
     <g>
       <path class="cls-1" d="M447.2,147.17c0,2.15-2.49.78-3.25-.18l-53.11-66.93-.27,42.63c-.04,6.18.15,12.24,2.49,17.88.86,3.57,3.66,4.9,7.29,6.78-6.71.36-12.98.62-20.6-.14,5.14-2.87,7.61-7.26,8.08-13.21,1.48-18.92,1.3-37.82.12-56.71-.24-3.86-5.47-5.76-8.02-8.49l18.59-.36,46.18,58.2c1.1-10.77.46-20.46.64-30.81.16-9.19.41-23.71-9.81-26.85,7.49-1.01,13.58-.62,20.71-.16-8.86,3.39-9.06,15.98-9.06,24.18l.03,54.16Z"/>
       <path class="cls-1" d="M217.34,149.71l-55.6-69.58-.4,42.54c-.08,8.12-.09,21.66,9.82,24.68-6.91.38-13.28.61-20.66-.13,7.55-3.16,8.77-14,8.83-20.69.14-16.64.82-32.99-.62-49.44-.34-3.76-5.58-5.46-8.05-8.31,6.35-.57,12.38-.26,19.01-.15l46.08,58.32.43-34.91c.11-8.61-.84-19.44-9.09-23.19,7.12-.42,12.94-.66,20,.15-3.11,2.03-5.95,2.78-6.66,6.43-1.94,5.6-2.92,11.49-2.25,17.59l-.83,56.72Z"/>

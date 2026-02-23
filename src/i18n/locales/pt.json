@@ -1,0 +1,154 @@
+{
+    "header": {
+        "nav": {
+            "home": "Início",
+            "accommodations": "Acomodações",
+            "amenities": "Comodidades",
+            "location": "Localização",
+            "gallery": "Galeria",
+            "faq": "FAQ"
+        },
+        "reserve_btn": "Reservar",
+        "reserve_now_btn": "Reservar Agora"
+    },
+    "hero": {
+        "welcome": "Bem-Vindo ao",
+        "title": "Residencial Santana",
+        "subtitle": "Suítes, Lofts e Apartamentos projetados para o seu conforto na melhor localização da cidade.",
+        "cta_availability": "Ver Disponibilidade"
+    },
+    "accommodations": {
+        "title": "Nossas Acomodações",
+        "subtitle": "Opções projetadas com zelo e sofisticação para atender a diferentes necessidades, todas com a exclusividade e conforto que merece.",
+        "suite": {
+            "title": "Suíte",
+            "desc": "Acomodação versátil e aconchegante, ideal para quem busca praticidade sem abrir mão do conforto.",
+            "capacity": "2 ou 3 pessoas",
+            "bed": "Cama Queen ou Configuração Tripla",
+            "amenity1": "Ar-condicionado e Banheiro privativo",
+            "tv": "TV Led"
+        },
+        "loft": {
+            "title": "Loft",
+            "desc": "Espaço moderno e integrado com cozinha privativa, unindo o conforto de um hotel com a liberdade de casa.",
+            "capacity": "Até 2 pessoas",
+            "bed": "Cama Queen Size",
+            "amenity1": "Cozinha equipada e Lavanderia",
+            "amenity2": "Ar-condicionado e TV"
+        },
+        "apartment": {
+            "title": "Apartamento",
+            "desc": "A maior unidade do residencial, com ambientes separados e estrutura completa para toda a família.",
+            "capacity": "Até 6 pessoas",
+            "bed": "Quarto privativo + Sofá-cama na sala",
+            "kitchen": "Cozinha completa com utensílios",
+            "living": "Sala de estar e TV",
+            "amenity2": "Ar-condicionado e TV"
+        },
+        "check_availability": "Reservar"
+    },
+    "amenities": {
+        "title": "Fique como se estivesse em casa",
+        "subtitle": "Pensamos em cada detalhe para proporcionar o máximo de conforto durante a sua estadia no paraíso baiano.",
+        "list": {
+            "ac": {
+                "title": "Ar-Condicionado",
+                "desc": "Climatização ideal em todas as unidades"
+            },
+            "wifi": {
+                "title": "Wi-Fi Grátis",
+                "desc": "Internet de alta velocidade em todo o local"
+            },
+            "kitchen": {
+                "title": "Cozinha Equipada",
+                "desc": "Completa para preparar suas próprias refeições"
+            },
+            "bedding": {
+                "title": "Roupa de Cama",
+                "desc": "Enxoval premium de qualidade hoteleira"
+            },
+            "cleaning": {
+                "title": "Limpeza Impecável",
+                "desc": "Ambientes higienizados e sempre limpos"
+            },
+            "leisure": {
+                "title": "Área de Lazer",
+                "desc": "Espaço com chuveirão, churrasqueira, mesas e bebidas geladas"
+            },
+            "security": {
+                "title": "Segurança",
+                "desc": "Local fechado e seguro"
+            },
+            "perfect_location": {
+                "title": "Localização Perfeita",
+                "desc": "Perto das melhores praias e baladas de Itacaré"
+            }
+        }
+    },
+    "location": {
+        "label": "Nossa Localização",
+        "title": "O coração de Itacaré",
+        "desc": "O Residencial Santana está estrategicamente localizado para que possa desfrutar do melhor que a cidade tem a oferecer. Estamos a poucos passos da famosa Rua da Pituba, o centro gastronómico e noturno de Itacaré.",
+        "places": {
+            "concha": {
+                "name": "Praia da Concha",
+                "time": "8 minutos de caminhada"
+            },
+            "tiririca": {
+                "name": "Praia do Tiririca",
+                "time": "15 minutos de caminhada"
+            },
+            "pituba": {
+                "name": "Rua da Pituba",
+                "time": "2 minutos de caminhada"
+            }
+        },
+        "map_btn": "Ver no Google Maps",
+        "card_title": "Residencial Santana",
+        "card_desc": "Sinta a brisa do mar sem abdicar do conforto urbano."
+    },
+    "gallery": {
+        "title": "Galeria de Fotos",
+        "subtitle": "Explore os nossos espaços detalhadamente. Um vislumbre do conforto e estilo que o aguardam em suas próximas férias.",
+        "zoom": "Aumentar"
+    },
+    "faq": {
+        "title": "Perguntas Frequentes",
+        "subtitle": "Tudo o que precisa saber antes de reservar a sua estadia connosco.",
+        "more_questions": "Ainda tem dúvidas?",
+        "contact_whatsapp": "Fale conosco pelo WhatsApp →",
+        "questions": [
+            {
+                "q": "Qual o horário de check-in e check-out?",
+                "a": "Check-in a partir das 14h e check-out até às 12h. Horários flexíveis podem ser combinados mediante disponibilidade."
+            },
+            {
+                "q": "Aceitam pets?",
+                "a": "Por favor, consulte disponibilidade e condições para hospedagem com pets através do WhatsApp."
+            },
+            {
+                "q": "Qual a política de cancelamento?",
+                "a": "Cancelamento gratuito até 7 dias antes da data de entrada. Consulte condições específicas no momento da reserva."
+            },
+            {
+                "q": "O residencial é próximo ao centro (Rua da Pituba)?",
+                "a": "Sim, estamos localizados de forma estratégica para que você possa aproveitar a vida noturna e os restaurantes da Rua da Pituba sem a necessidade de carro."
+            }
+        ]
+    },
+    "footer": {
+        "about": "A sua casa em Itacaré. Conforto, localização privilegiada e momentos inesquecíveis no coração da Bahia.",
+        "quick_links": "Links Rápidos",
+        "links_title": "Links Rápidos",
+        "contacts": "Contato",
+        "contact_title": "Contato",
+        "address": "Av. Castro Alves, 05 (Caminho da Ribeira), Itacaré - BA CEP: 45530-000",
+        "rights": "Residencial Santana. Todos os direitos reservados.",
+        "developed_by": "Desenvolvido com sofisticação"
+    },
+    "wa_messages": {
+        "suite": "Olá! Gostaria de saber a disponibilidade da Suíte.",
+        "loft": "Olá! Gostaria de saber a disponibilidade do Loft.",
+        "apartment": "Olá! Gostaria de saber a disponibilidade do Apartamento."
+    }
+}
