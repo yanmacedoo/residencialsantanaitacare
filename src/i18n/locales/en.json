@@ -116,7 +116,25 @@
         "title": "Contact Us",
         "more_questions": "Still have questions?",
         "subtitle": "Talk to us on WhatsApp and we'll answer everything you need.",
-        "contact_whatsapp": "Talk to us on WhatsApp"
+        "contact_whatsapp": "Talk to us on WhatsApp",
+        "questions": [
+            {
+                "q": "What are the check-in and check-out times?",
+                "a": "Check-in is from 2:00 PM and check-out is until 12:00 PM. Flexible hours can be arranged depending on availability."
+            },
+            {
+                "q": "Are pets allowed?",
+                "a": "Please check availability and conditions for hosting with pets via WhatsApp."
+            },
+            {
+                "q": "What is the cancellation policy?",
+                "a": "Free cancellation up to 7 days before the check-in date. Check specific conditions at the time of booking."
+            },
+            {
+                "q": "Is the residence close to the center (Pituba Street)?",
+                "a": "Yes, we are strategically located so you can enjoy the nightlife and restaurants on Pituba Street without needing a car."
+            }
+        ]
     },
     "footer": {
         "about": "Your home in Itacaré. Comfort, privileged location, and unforgettable moments in the heart of Bahia.",
@@ -124,7 +142,7 @@
         "links_title": "Quick Links",
         "contacts": "Contact",
         "contact_title": "Contact",
-        "address": "Castro Alves Ave, 05 (Caminho da Ribeira), Itacaré - BA Zip Code: 45530-000",
+        "address": "Rua Joaquim Vieira, 160 — Centro<br>Itacaré, BA",
         "rights": "Residencial Santana. All rights reserved.",
         "developed_by": "Developed with sophistication"
     },

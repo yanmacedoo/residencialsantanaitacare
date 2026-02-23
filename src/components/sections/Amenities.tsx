@@ -42,7 +42,7 @@ export function Amenities() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <motion.h2
-                        className="text-3xl md:text-5xl font-serif text-gray-900 mb-6"
+                        className="text-2xl md:text-5xl font-serif text-gray-900 mb-6 text-balance"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}

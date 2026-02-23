@@ -116,15 +116,33 @@
         "title": "Fale Conosco",
         "more_questions": "Ainda tem dúvidas?",
         "subtitle": "Fale conosco pelo WhatsApp e respondemos tudo o que precisar.",
-        "contact_whatsapp": "Fale conosco no WhatsApp"
+        "contact_whatsapp": "Fale conosco no WhatsApp",
+        "questions": [
+            {
+                "q": "Qual o horário de check-in e check-out?",
+                "a": "Check-in a partir das 14h e check-out até às 12h. Horários flexíveis podem ser combinados mediante disponibilidade."
+            },
+            {
+                "q": "Aceitam pets?",
+                "a": "Por favor, consulte disponibilidade e condições para hospedagem com pets através do WhatsApp."
+            },
+            {
+                "q": "Qual a política de cancelamento?",
+                "a": "Cancelamento gratuito até 7 dias antes da data de entrada. Consulte condições específicas no momento da reserva."
+            },
+            {
+                "q": "O residencial é próximo ao centro (Rua da Pituba)?",
+                "a": "Sim, estamos localizados de forma estratégica para que você possa aproveitar a vida noturna e os restaurantes da Rua da Pituba sem a necessidade de carro."
+            }
+        ]
     },
     "footer": {
-        "about": "A sua casa em Itacaré. Conforto, localização privilegiada e momentos inesquecíveis no coração da Bahia.",
+        "about": "A sua casa em Itacaré.<br>Conforto, localização privilegiada e momentos inesquecíveis no coração da Bahia.",
         "quick_links": "Links Rápidos",
         "links_title": "Links Rápidos",
         "contacts": "Contato",
         "contact_title": "Contato",
-        "address": "Av. Castro Alves, 05 (Caminho da Ribeira), Itacaré - BA CEP: 45530-000",
+        "address": "Rua Joaquim Vieira, 160 — Centro<br>Itacaré, BA",
         "rights": "Residencial Santana. Todos os direitos reservados.",
         "developed_by": "Desenvolvido com sofisticação"
     },
