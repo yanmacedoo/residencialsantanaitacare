@@ -37,7 +37,8 @@
             "amenity1": "Cozinha completa",
             "amenity2": "Ar-condicionado",
             "amenity3": "TV",
-            "amenity4": "Lavanderia"
+            "amenity4": "Lavanderia",
+            "amenity5": "Banheiro privativo"
         },
         "apartment": {
             "title": "Apartamento",
@@ -48,7 +49,8 @@
             "living": "Sala de estar com Sofá-cama",
             "amenity2": "Ar-condicionado",
             "amenity3": "TV",
-            "amenity4": "Lavanderia"
+            "amenity4": "Lavanderia",
+            "amenity5": "Banheiro privativo"
         },
         "check_availability": "Reservar"
     },

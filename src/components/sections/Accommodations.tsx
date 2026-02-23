@@ -41,6 +41,7 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <AirVent size={18} />, text: t('accommodations.loft.amenity2') },
             { icon: <Tv size={18} />, text: t('accommodations.loft.amenity3') },
             { icon: <WashingMachine size={18} />, text: t('accommodations.loft.amenity4') },
+            { icon: <Bath size={18} />, text: t('accommodations.loft.amenity5') },
         ],
         images: [
             '/assets/images/loft/image1.webp',
@@ -67,6 +68,7 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <AirVent size={18} />, text: t('accommodations.apartment.amenity2') },
             { icon: <Tv size={18} />, text: t('accommodations.apartment.amenity3') },
             { icon: <WashingMachine size={18} />, text: t('accommodations.apartment.amenity4') },
+            { icon: <Bath size={18} />, text: t('accommodations.apartment.amenity5') },
         ],
         images: [
             '/assets/images/apt/image1.webp',
