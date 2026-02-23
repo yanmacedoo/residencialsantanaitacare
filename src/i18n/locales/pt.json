@@ -25,8 +25,9 @@
             "desc": "Acomodação versátil e aconchegante, ideal para quem busca praticidade sem abrir mão do conforto.",
             "capacity": "2 ou 3 pessoas",
             "bed": "Cama Queen ou Configuração Tripla",
-            "amenity1": "Ar-condicionado e Banheiro privativo",
-            "tv": "TV Led"
+            "amenity1": "Ar-condicionado",
+            "amenity1_ext": "Banheiro privativo",
+            "tv": "TV"
         },
         "loft": {
             "title": "Loft",
@@ -34,7 +35,8 @@
             "capacity": "Até 2 pessoas",
             "bed": "Cama Queen Size",
             "amenity1": "Cozinha equipada e Lavanderia",
-            "amenity2": "Ar-condicionado e TV"
+            "amenity2": "Ar-condicionado",
+            "amenity3": "TV"
         },
         "apartment": {
             "title": "Apartamento",
@@ -42,8 +44,9 @@
             "capacity": "Até 6 pessoas",
             "bed": "Quarto privativo + Sofá-cama na sala",
             "kitchen": "Cozinha completa com utensílios",
-            "living": "Sala de estar e TV",
-            "amenity2": "Ar-condicionado e TV"
+            "living": "Sala de estar",
+            "amenity2": "Ar-condicionado",
+            "amenity3": "TV"
         },
         "check_availability": "Reservar"
     },

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, BedDouble, AirVent, Tv, CookingPot, Home, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, BedDouble, AirVent, Tv, CookingPot, Home, ChevronLeft, ChevronRight, Bath } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
 
@@ -14,6 +14,7 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <Users size={18} />, text: t('accommodations.suite.capacity') },
             { icon: <BedDouble size={18} />, text: t('accommodations.suite.bed') },
             { icon: <AirVent size={18} />, text: t('accommodations.suite.amenity1') },
+            { icon: <Bath size={18} />, text: t('accommodations.suite.amenity1_ext') },
             { icon: <Tv size={18} />, text: t('accommodations.suite.tv') },
         ],
         images: [
@@ -37,7 +38,8 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <Users size={18} />, text: t('accommodations.loft.capacity') },
             { icon: <BedDouble size={18} />, text: t('accommodations.loft.bed') },
             { icon: <CookingPot size={18} />, text: t('accommodations.loft.amenity1') },
-            { icon: <Tv size={18} />, text: t('accommodations.loft.amenity2') },
+            { icon: <AirVent size={18} />, text: t('accommodations.loft.amenity2') },
+            { icon: <Tv size={18} />, text: t('accommodations.loft.amenity3') },
         ],
         images: [
             '/assets/images/loft/image1.webp',
@@ -61,7 +63,8 @@ const getAccommodationsData = (t: TFunction) => [
             { icon: <BedDouble size={18} />, text: t('accommodations.apartment.bed') },
             { icon: <CookingPot size={18} />, text: t('accommodations.apartment.kitchen') },
             { icon: <Home size={18} />, text: t('accommodations.apartment.living') },
-            { icon: <Tv size={18} />, text: t('accommodations.apartment.amenity2') },
+            { icon: <AirVent size={18} />, text: t('accommodations.apartment.amenity2') },
+            { icon: <Tv size={18} />, text: t('accommodations.apartment.amenity3') },
         ],
         images: [
             '/assets/images/apt/image1.webp',
@@ -78,36 +81,53 @@ const getAccommodationsData = (t: TFunction) => [
     }
 ];
 
-// Componente de Carrossel com Fade e Autoplay
-const ImageCarousel = ({ images, title }: { images: string[], title: string }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+// Componente de Carrossel com Fade e Autoplay Sincronizado
+const ImageCarousel = ({ images, title, globalIndex }: { images: string[], title: string, globalIndex: number }) => {
+    // Mantemos um estado local para permitir navegação manual e um offset
+    const [localIndex, setLocalIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const [manualInteractionCount, setManualInteractionCount] = useState(0);
 
-    const goTo = (index: number) => setCurrentIndex((index + images.length) % images.length);
-    const goPrev = () => goTo(currentIndex - 1);
-    const goNext = () => goTo(currentIndex + 1);
+    const goTo = (index: number) => {
+        setLocalIndex((index + images.length) % images.length);
+        setManualInteractionCount(c => c + 1); // Desacopla temporariamente da sincronização global
+    };
 
-    // Autoplay a cada 4 segundos, pausa ao hover
+    const goPrev = () => goTo(localIndex - 1);
+    const goNext = () => goTo(localIndex + 1);
+
+    // Sincroniza com o timer global do pai apenas se o user não interagiu manualmente recentemente
+    // ou se o mouse não está sobre o carrossel
     useEffect(() => {
-        if (isPaused) return;
-        const timer = setInterval(() => {
-            setCurrentIndex(prev => (prev + 1) % images.length);
-        }, 4000);
-        return () => clearInterval(timer);
-    }, [isPaused, images.length]);
+        if (!isHovered && manualInteractionCount === 0) {
+            setLocalIndex(globalIndex % images.length);
+        }
+    }, [globalIndex, isHovered, manualInteractionCount, images.length]);
+
+    // Reseta a "pausa" manual depois de alguns segundos sem interagir
+    useEffect(() => {
+        if (manualInteractionCount > 0 && !isHovered) {
+            const timer = setTimeout(() => {
+                setManualInteractionCount(0);
+                // Força um re-sync com o global offset atual
+                setLocalIndex(globalIndex % images.length);
+            }, 6000);
+            return () => clearTimeout(timer);
+        }
+    }, [manualInteractionCount, isHovered, globalIndex, images.length]);
 
     return (
         <div
             className="relative group overflow-hidden bg-gray-100 h-64 md:h-80 w-full"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
             {/* Imagens com fade */}
             <AnimatePresence mode="sync">
                 <motion.img
-                    key={currentIndex}
-                    src={images[currentIndex]}
-                    alt={`${title} - Foto ${currentIndex + 1}`}
+                    key={localIndex}
+                    src={images[localIndex]}
+                    alt={`${title} - Foto ${localIndex + 1}`}
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                     initial={{ opacity: 0 }}
@@ -141,7 +161,7 @@ const ImageCarousel = ({ images, title }: { images: string[], title: string }) =
                 {images.map((_, index) => (
                     <button
                         key={index}
-                        className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-white w-4' : 'bg-white/50 w-2 hover:bg-white/80'}`}
+                        className={`h-2 rounded-full transition-all duration-300 ${index === localIndex ? 'bg-white w-4' : 'bg-white/50 w-2 hover:bg-white/80'}`}
                         onClick={() => goTo(index)}
                         aria-label={`Ir para a foto ${index + 1}`}
                     />
@@ -154,6 +174,19 @@ const ImageCarousel = ({ images, title }: { images: string[], title: string }) =
 export function Accommodations() {
     const { t } = useTranslation();
     const accommodationsData = getAccommodationsData(t);
+
+    // Timer Global para Sincronização
+    const [globalIndex, setGlobalIndex] = useState(0);
+    const [isGlobalPaused, setIsGlobalPaused] = useState(false);
+
+    useEffect(() => {
+        if (isGlobalPaused) return;
+
+        const timer = setInterval(() => {
+            setGlobalIndex(prev => prev + 1);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, [isGlobalPaused]);
 
     return (
         <section id="acomodacoes" className="py-14 bg-[var(--color-background-offwhite)]">
@@ -179,7 +212,11 @@ export function Accommodations() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    onMouseEnter={() => setIsGlobalPaused(true)}
+                    onMouseLeave={() => setIsGlobalPaused(false)}
+                >
                     {accommodationsData.map((acc, idx) => (
                         <motion.div
                             key={acc.id}
@@ -189,7 +226,7 @@ export function Accommodations() {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, delay: idx * 0.2 }}
                         >
-                            <ImageCarousel images={acc.images} title={acc.title} />
+                            <ImageCarousel images={acc.images} title={acc.title} globalIndex={globalIndex} />
 
                             <div className="p-8 flex-1 flex flex-col">
                                 <h3 className="text-2xl font-serif text-gray-900 mb-3">{acc.title}</h3>

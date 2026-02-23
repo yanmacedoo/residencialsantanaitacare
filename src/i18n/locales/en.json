@@ -25,8 +25,9 @@
             "desc": "Versatile and cozy accommodation, ideal for those seeking practicality without giving up comfort.",
             "capacity": "2 or 3 people",
             "bed": "Queen Bed or Triple Configuration",
-            "amenity1": "Air conditioning and private bathroom",
-            "tv": "LED TV"
+            "amenity1": "Air conditioning",
+            "amenity1_ext": "Private bathroom",
+            "tv": "TV"
         },
         "loft": {
             "title": "Loft",
@@ -34,7 +35,8 @@
             "capacity": "Up to 2 people",
             "bed": "Queen Size Bed",
             "amenity1": "Equipped kitchen and laundry",
-            "amenity2": "Air conditioning and TV"
+            "amenity2": "Air conditioning",
+            "amenity3": "TV"
         },
         "apartment": {
             "title": "Apartment",
@@ -42,8 +44,9 @@
             "capacity": "Up to 6 people",
             "bed": "Private bedroom + Sofa bed in living room",
             "kitchen": "Full kitchen with utensils",
-            "living": "Living room and TV",
-            "amenity2": "Air conditioning and TV"
+            "living": "Living room",
+            "amenity2": "Air conditioning",
+            "amenity3": "TV"
         },
         "check_availability": "Book"
     },

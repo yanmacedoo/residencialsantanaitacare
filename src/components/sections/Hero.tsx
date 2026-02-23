@@ -1,28 +1,51 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+
+const heroImages = [
+    '/assets/images/heroo.webp',
+    '/assets/images/hero11.webp',
+    '/assets/images/hero22.webp',
+    '/assets/images/hero33.webp',
+    '/assets/images/hero44.webp'
+];
 
 export function Hero() {
     const { t, i18n } = useTranslation();
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Autoplay do slideshow a cada 5 segundos
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <section
             id="inicio"
-            className="relative w-full h-[100svh] flex items-center justify-center overflow-hidden"
+            className="relative w-full h-[100svh] flex items-center justify-center overflow-hidden bg-black"
         >
-            {/* Background Image / Parallax */}
-            <motion.div
-                className="absolute inset-0 w-full h-full"
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-            >
+            {/* Slideshow Background */}
+            <div className="absolute inset-0 w-full h-full">
+                <AnimatePresence mode="popLayout">
+                    <motion.img
+                        key={currentIndex}
+                        src={heroImages[currentIndex]}
+                        alt={`Residencial Santana Itacaré - Vista ${currentIndex + 1}`}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            opacity: { duration: 1.5, ease: "easeInOut" },
+                            scale: { duration: 6, ease: "linear" }
+                        }}
+                    />
+                </AnimatePresence>
                 <div className="absolute inset-0 bg-black/40 z-10" /> {/* Overlay escuro */}
-                <img
-                    src="/assets/images/heroo.webp"
-                    alt="Residencial Santana Itacaré"
-                    className="w-full h-full object-cover"
-                />
-            </motion.div>
+            </div>
 
             {/* Content */}
             <div className="relative z-20 container mx-auto px-6 text-center mt-16 md:mt-0 flex flex-col items-center">
