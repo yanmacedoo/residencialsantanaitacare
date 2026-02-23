@@ -113,28 +113,10 @@
         "zoom": "Aumentar"
     },
     "faq": {
-        "title": "Perguntas Frequentes",
-        "subtitle": "Tudo o que precisa saber antes de reservar a sua estadia connosco.",
+        "title": "Fale Conosco",
         "more_questions": "Ainda tem dúvidas?",
-        "contact_whatsapp": "Fale conosco pelo WhatsApp →",
-        "questions": [
-            {
-                "q": "Qual o horário de check-in e check-out?",
-                "a": "Check-in a partir das 14h e check-out até às 12h. Horários flexíveis podem ser combinados mediante disponibilidade."
-            },
-            {
-                "q": "Aceitam pets?",
-                "a": "Por favor, consulte disponibilidade e condições para hospedagem com pets através do WhatsApp."
-            },
-            {
-                "q": "Qual a política de cancelamento?",
-                "a": "Cancelamento gratuito até 7 dias antes da data de entrada. Consulte condições específicas no momento da reserva."
-            },
-            {
-                "q": "O residencial é próximo ao centro (Rua da Pituba)?",
-                "a": "Sim, estamos localizados de forma estratégica para que você possa aproveitar a vida noturna e os restaurantes da Rua da Pituba sem a necessidade de carro."
-            }
-        ]
+        "subtitle": "Fale conosco pelo WhatsApp e respondemos tudo o que precisar.",
+        "contact_whatsapp": "Fale conosco no WhatsApp"
     },
     "footer": {
         "about": "A sua casa em Itacaré. Conforto, localização privilegiada e momentos inesquecíveis no coração da Bahia.",
@@ -145,6 +127,10 @@
         "address": "Av. Castro Alves, 05 (Caminho da Ribeira), Itacaré - BA CEP: 45530-000",
         "rights": "Residencial Santana. Todos os direitos reservados.",
         "developed_by": "Desenvolvido com sofisticação"
+    },
+    "booking": {
+        "title": "Garanta a sua estadia",
+        "subtitle": "Escolha as datas da sua viagem e reserve a sua acomodação preferida diretamente conosco."
     },
     "wa_messages": {
         "suite": "Olá! Gostaria de saber a disponibilidade da Suíte.",

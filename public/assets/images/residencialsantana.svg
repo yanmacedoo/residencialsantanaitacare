@@ -37,8 +37,8 @@
   <g id="Camada_1-2" data-name="Camada 1">
     <rect class="cls-3" x="0" y="167.17" width="541.96" height="25.45"/>
     <rect class="cls-3" x="18.02" y="196.43" width="505.92" height="24.66"/>
-    <text class="cls-5" transform="translate(12.11 187.33)"><tspan x="0" y="0">Viva Itacaré com o conforto que você merece!</tspan></text>
-    <text class="cls-4" transform="translate(31.08 214.13)"><tspan x="0" y="0">Suítes, lofts e Apartamentos mobiliados no centro de tudo.</tspan></text>
+    <text class="cls-5" text-anchor="middle" transform="translate(270.98 187.33)"><tspan x="0" y="0">Viva Itacaré com o conforto que você merece!</tspan></text>
+    <text class="cls-4" text-anchor="middle" transform="translate(270.98 214.13)"><tspan x="0" y="0">Suítes, lofts e Apartamentos mobiliados no centro de tudo.</tspan></text>
     <text class="cls-2" transform="translate(118.74 38.97)"><tspan x="0" y="0">residencial</tspan></text>
     <g>
       <path class="cls-1" d="M447.2,147.17c0,2.15-2.49.78-3.25-.18l-53.11-66.93-.27,42.63c-.04,6.18.15,12.24,2.49,17.88.86,3.57,3.66,4.9,7.29,6.78-6.71.36-12.98.62-20.6-.14,5.14-2.87,7.61-7.26,8.08-13.21,1.48-18.92,1.3-37.82.12-56.71-.24-3.86-5.47-5.76-8.02-8.49l18.59-.36,46.18,58.2c1.1-10.77.46-20.46.64-30.81.16-9.19.41-23.71-9.81-26.85,7.49-1.01,13.58-.62,20.71-.16-8.86,3.39-9.06,15.98-9.06,24.18l.03,54.16Z"/>

@@ -12,7 +12,7 @@
         "reserve_now_btn": "Book Now"
     },
     "hero": {
-        "welcome": "Welcome to Itacaré",
+        "welcome": "Welcome to",
         "title": "Residencial Santana",
         "subtitle": "Suites, Lofts, and Apartments designed for your comfort in the best location of the city.",
         "cta_availability": "Check Availability"
@@ -113,28 +113,10 @@
         "zoom": "Enlarge"
     },
     "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Everything you need to know before booking your stay with us.",
+        "title": "Contact Us",
         "more_questions": "Still have questions?",
-        "contact_whatsapp": "Talk to us on WhatsApp →",
-        "questions": [
-            {
-                "q": "What are the check-in and check-out times?",
-                "a": "Check-in is from 2:00 PM and check-out is until 12:00 PM. Flexible hours can be arranged depending on availability."
-            },
-            {
-                "q": "Are pets allowed?",
-                "a": "Please check availability and conditions for hosting with pets via WhatsApp."
-            },
-            {
-                "q": "What is the cancellation policy?",
-                "a": "Free cancellation up to 7 days before the check-in date. Check specific conditions at the time of booking."
-            },
-            {
-                "q": "Is the residence close to the center (Pituba Street)?",
-                "a": "Yes, we are strategically located so you can enjoy the nightlife and restaurants on Pituba Street without needing a car."
-            }
-        ]
+        "subtitle": "Talk to us on WhatsApp and we'll answer everything you need.",
+        "contact_whatsapp": "Talk to us on WhatsApp"
     },
     "footer": {
         "about": "Your home in Itacaré. Comfort, privileged location, and unforgettable moments in the heart of Bahia.",
@@ -145,6 +127,10 @@
         "address": "Castro Alves Ave, 05 (Caminho da Ribeira), Itacaré - BA Zip Code: 45530-000",
         "rights": "Residencial Santana. All rights reserved.",
         "developed_by": "Developed with sophistication"
+    },
+    "booking": {
+        "title": "Secure Your Stay",
+        "subtitle": "Choose your travel dates and book your preferred accommodation directly with us."
     },
     "wa_messages": {
         "suite": "Hello! I would like to know the availability of the Suite.",
