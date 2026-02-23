@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Users, BedDouble, AirVent, Tv, CookingPot, Home, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
@@ -23,6 +22,10 @@ const getAccommodationsData = (t: TFunction) => [
             '/assets/images/suites/image3.webp',
             '/assets/images/suites/image4.webp',
             '/assets/images/suites/image5.webp',
+            '/assets/images/suites/image6.webp',
+            '/assets/images/suites/image7.webp',
+            '/assets/images/suites/image8.webp',
+            '/assets/images/suites/image9.webp',
         ],
         link: `https://wa.me/5573981084224?text=${encodeURIComponent(t('wa_messages.suite'))}`,
     },
@@ -42,6 +45,10 @@ const getAccommodationsData = (t: TFunction) => [
             '/assets/images/loft/image3.webp',
             '/assets/images/loft/image4.webp',
             '/assets/images/loft/image5.webp',
+            '/assets/images/loft/image6.webp',
+            '/assets/images/loft/image7.webp',
+            '/assets/images/loft/image8.webp',
+            '/assets/images/loft/image9.webp',
         ],
         link: `https://wa.me/5573981084224?text=${encodeURIComponent(t('wa_messages.loft'))}`,
     },
@@ -62,80 +69,80 @@ const getAccommodationsData = (t: TFunction) => [
             '/assets/images/apt/image3.webp',
             '/assets/images/apt/image4.webp',
             '/assets/images/apt/image5.webp',
+            '/assets/images/apt/image6.webp',
+            '/assets/images/apt/image7.webp',
+            '/assets/images/apt/image8.webp',
+            '/assets/images/apt/image9.webp',
         ],
         link: `https://wa.me/5573981084224?text=${encodeURIComponent(t('wa_messages.apartment'))}`,
     }
 ];
 
-// Componente individual de Carrossel para manter o estado separado por card
+// Componente de Carrossel com Fade e Autoplay
 const ImageCarousel = ({ images, title }: { images: string[], title: string }) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev();
-    }, [emblaApi]);
+    const goTo = (index: number) => setCurrentIndex((index + images.length) % images.length);
+    const goPrev = () => goTo(currentIndex - 1);
+    const goNext = () => goTo(currentIndex + 1);
 
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext();
-    }, [emblaApi]);
-
-    const onSelect = useCallback(() => {
-        if (!emblaApi) return;
-        setSelectedIndex(emblaApi.selectedScrollSnap());
-    }, [emblaApi, setSelectedIndex]);
-
+    // Autoplay a cada 4 segundos, pausa ao hover
     useEffect(() => {
-        if (!emblaApi) return;
-        // eslint-disable-next-line react-hooks/exhaustive-deps, react-hooks/set-state-in-effect
-        onSelect();
-        emblaApi.on('select', onSelect);
-        emblaApi.on('reInit', onSelect);
-    }, [emblaApi, onSelect]);
+        if (isPaused) return;
+        const timer = setInterval(() => {
+            setCurrentIndex(prev => (prev + 1) % images.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, [isPaused, images.length]);
 
     return (
-        <div className="relative group overflow-hidden bg-gray-100 h-64 md:h-80 w-full" ref={emblaRef}>
-            <div className="flex h-full touch-pan-y">
-                {images.map((src, index) => (
-                    <div className="relative flex-[0_0_100%] h-full w-full" key={index}>
-                        <img
-                            src={src}
-                            alt={`${title} - Foto ${index + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy"
-                            onError={(e) => {
-                                // Fallback de imagem caso o arquivo não exista
-                                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop';
-                            }}
-                        />
-                    </div>
-                ))}
-            </div>
+        <div
+            className="relative group overflow-hidden bg-gray-100 h-64 md:h-80 w-full"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+        >
+            {/* Imagens com fade */}
+            <AnimatePresence mode="sync">
+                <motion.img
+                    key={currentIndex}
+                    src={images[currentIndex]}
+                    alt={`${title} - Foto ${currentIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                    onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop';
+                    }}
+                />
+            </AnimatePresence>
 
-            {/* Controlos Navigation */}
+            {/* Setas de navegação */}
             <button
                 className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-sm z-10 hidden md:flex"
-                onClick={scrollPrev}
+                onClick={goPrev}
                 aria-label="Imagem anterior"
             >
                 <ChevronLeft size={20} />
             </button>
             <button
                 className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-sm z-10 hidden md:flex"
-                onClick={scrollNext}
+                onClick={goNext}
                 aria-label="Próxima imagem"
             >
                 <ChevronRight size={20} />
             </button>
 
-            {/* Pontos Nav */}
+            {/* Dots de navegação */}
             <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
                 {images.map((_, index) => (
                     <button
                         key={index}
-                        className={`w-2 h-2 rounded-full transition-all ${index === selectedIndex ? 'bg-white w-4' : 'bg-white/50 hover:bg-white/80'
-                            }`}
-                        onClick={() => emblaApi?.scrollTo(index)}
+                        className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-white w-4' : 'bg-white/50 w-2 hover:bg-white/80'}`}
+                        onClick={() => goTo(index)}
                         aria-label={`Ir para a foto ${index + 1}`}
                     />
                 ))}
